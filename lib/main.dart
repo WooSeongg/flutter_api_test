@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_api_test/page/JmPricePage.dart';
 import 'package:get/get.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
-void main() {
+import 'common/constants.dart';
+
+void main() async{
+  //packageInfo = await PackageInfo.fromPlatform();
   runApp(const MyApp());
 }
 
