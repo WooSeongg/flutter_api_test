@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_api_test/data/TR8434.dart';
 import 'package:flutter_api_test/page/JmPricePage.dart';
 import 'package:get/get.dart';
 import 'package:package_info_plus/package_info_plus.dart';
@@ -86,6 +87,15 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              ElevatedButton(
+                onPressed: () async {
+                  print("&^&^&^&^&^&^&^&^&&");
+                  var a = await fetchTR8434();
+                  print(a.sunAmt);
+                },
+                child:Text("통신 테스트")
+              ),
+              SizedBox(height: 20),
               ElevatedButton(
                   onPressed: (){
                     Get.to(JmPricePage());
